@@ -1,6 +1,8 @@
 body {
 	margin: 0;
-	font-family: 'Mooli', sans-serif;
+	font-family: 'Goudy Bookletter 1911', serif;
+	/* font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
@@ -205,6 +207,9 @@ nav > span.passive {
 	border: 0.1px solid #a3a1a127;
 	justify-content: space-around;
 }
+/* .product {
+	background-color: #b64040;
+} */
 
 /*Media Queries*/
 
