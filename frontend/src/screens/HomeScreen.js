@@ -1,22 +1,33 @@
 import { useState, useEffect } from 'react';
-import products from '../products';
 import Product from '../components/Product';
 import { Row, Col } from 'react-bootstrap';
-// import axios from 'axios';
-// import Product from '../components/Product';
+import axios from 'axios';
 
 const HomeScreen = () => {
-	// const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState([]);
 
-	// useEffect(() => {
-	// 	const fetchProducts = async () => {
-	// 		const { data } = await axios.get('/api/products'); //proxy added in package.json
-	// 		setProducts(data);
-	// 		console.log(data);
-	// 	};
+	useEffect(() => {
+		const fetchProducts = async () => {
+			try {
+				const { data } = await axios.get('/api/products');
+				setProducts(data);
+				console.log(data);
+			} catch (error) {
+				if (error.response) {
+					// The request was made, but the server responded with a status code other than 2xx
+					console.error('Server Error:', error.response.data);
+				} else if (error.request) {
+					// The request was made but no response was received
+					console.error('No Response from Server');
+				} else {
+					// Something else happened while setting up the request
+					console.error('Error:', error.message);
+				}
+			}
+		};
 
-	// 	fetchProducts();
-	// }, []);
+		fetchProducts();
+	}, []);
 
 	return (
 		<div className="home" style={{ fontSize: '1.2rem' }}>
