@@ -1,7 +1,6 @@
 body {
 	margin: 0;
-	font-family: 'Goudy Bookletter 1911', serif;
-	/* font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif !important; /* font-family: 'Montserrat', sans-serif;
 	font-family: 'Roboto', sans-serif; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -144,6 +143,12 @@ nav > span.passive {
 	border-radius: 2%;
 	object-fit: cover;
 }
+/* .product-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 2.5em;
+	white-space: nowrap;
+} */
 
 /* Rating */
 
